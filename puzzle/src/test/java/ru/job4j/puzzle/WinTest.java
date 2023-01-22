@@ -53,4 +53,16 @@ public class WinTest {
         };
         assertThat(Win.check(board)).isFalse();
     }
+
+    @Test
+    public void whenNotWinHaotic() {
+        int[][] board = {
+                {1, 0, 1, 0, 1},
+                {0, 0, 0, 0, 0},
+                {0, 1, 0, 0, 0},
+                {0, 0, 0, 0, 0},
+                {1, 0, 0, 0, 0},
+        };
+        assertThat(Win.check(board)).isFalse();
+    }
 }
