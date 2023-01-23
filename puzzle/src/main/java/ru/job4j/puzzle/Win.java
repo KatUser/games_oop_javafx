@@ -5,9 +5,10 @@ public class Win {
         boolean rsl = false;
         for (int i = 0; i < board.length; i++) {
             if (board[i][i] == 1
-                    && checkHorizontal(board, i)
-                    || checkVertical(board, i)) {
+                    && (checkHorizontal(board, i)
+                    || checkVertical(board, i))) {
                 rsl = true;
+                break;
             }
         }
         return rsl;
@@ -31,9 +32,3 @@ public class Win {
         return true;
     }
 }
-
-
-
-
-
-
